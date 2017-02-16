@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        <title>FUJI ROCK FESTIVAL </title>
+        <!-- <link rel="stylesheet" href="./css/common.css"> -->
+        <!-- <link rel="stylesheet" href="http://developer.spotify.com/web-api/static/css/cached.css"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.9/font-awesome-animation.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="/css/common.css">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js" charset="utf-8"></script>
+    </head>
+
+    <body>
+
+        <div id="fujirock" data-role="page">
+            <div data-role="header">
+                <h1>FUJI ROCK FESTIVAL 2016</h1>
+            </div>
+
+            <div data-role="content">
+
+                <div data-role="tabs" class="list" id="tabs">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="#one" class="ui-link ui-btn ui-btn-active" >7月22日(金)</a></li>
+                            <li><a href="#two" >7月23日(土)</a></li>
+                            <li><a href="#three">7月24日(日)</a></li>
+                        </ul>
+                    </div>
+
+                    <form class="ui-filterable">
+                        <input id="artist-filter" data-type="search" placeholder="Search Artist..">
+                    </form>
+
+                    <div id="one">
+                        <ul data-role="listview" data-filter="true" data-input="#artist-filter"  data-icon="audio" data-split-theme="a" data-inset="true">
+                            <li data-role="list-divider" style="background-color:green;"><span style="color:white">GREEN STAGE</span></li>
+                            <li><a data-artist-id="0O0hxUrO2PKxZknken3R24" data-itunes-id="977044086" class="preview">
+                                <img src="http://i.scdn.co/image/0ca26e76f9ae629f158f32e64e702f83bbe36ebc">
+                                <h2>Suchmos</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-artist-id="1xU878Z1QtBldR7ru9owdU" data-itunes-id="5500360" class="preview">
+                                <img src="http://i.scdn.co/image/5d0b67506ce34853d78a0eb759f08a53557d0ffd">
+                                <h2>Phoenix</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-artist-id="3IunaFjvNKj98JW89JYv9u" data-itunes-id="971811598" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>the japanese house</h2>
+                                <p>Phoenix</p></a>
+                            </li>
+                        </ul>
+
+                        <ul data-role="listview" data-filter="true" data-input="#artist-filter"  data-icon="audio" data-split-theme="a" data-inset="true">
+                            <li data-role="list-divider" style="background-color:#999;"><span style="color:white">WHITE STAGE</span></li>
+                            <li><a data-artist-id="6nS5roXSAGhTGr34W6n7Et" class="preview">
+                                <img src="https://i.scdn.co/image/3ea296a08a4a2414fcf87d2ea3691c1eb7116bba">
+                                <h2>Disclosure</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-artist-id="1lc8mnyGrCLtPhCoWjRxjM" data-itunes-id="351343399" class="preview">
+                                <img src="https://i.scdn.co/image/1dcd454b9827a66a1e2536ff519b5906a9057d0e">
+                                <h2>Perfume</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-artist-id="7GN9PivdemQRKjDt4z5Zv8" class="preview">
+                                <img src="https://i.scdn.co/image/04f04d5345c3d638bbce8704f92d91c703f2e654">
+                                <h2>THE INTERNET</h2>
+                                <p>説明文</p></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div id="two">
+                        <ul data-role="listview" data-filter="true" data-input="#artist-filter"  data-icon="audio" data-split-theme="a" data-inset="true">
+                            <li data-role="list-divider" style="background-color:green;"><span style="color:white">GREEN STAGE</span></li>
+
+                            <li><a data-artist-id="7nK2GWw6SsLKb5OgEcfbF5" data-itunes-id="252312257" class="preview">
+                                <img src="https://img.barks.jp/image/review/1000087868/sakana1_s.jpg">
+                                <h2>サカナクション</h2>
+                                <p>説明</p></a>
+                            </li>
+
+                            <li><a data-artist-id="3vbKDsSS70ZX9D2OcvbZmS" data-itunes-id="920765176" class="preview">
+                                <img src="http://www.musicman-net.com/files/2016/01/f56a83bc31865e.jpg">
+                                <h2>雨のパレード</h2>
+                                <p>説明文</p></a>
+                            </li>
+
+                            <li><a data-artist-id="3bUwxJgNakzYKkqAVgZLlh" class="preview">
+                                <img src="https://i.scdn.co/image/e8cc27e05c8ebcce43033812b710e09b10c09f63">
+                                <h2>Travis</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-artist-id="7nK2GWw6SsLKb5OgEcfbF5" class="preview">
+                                <img src="https://i.scdn.co/image/6f29c7f279210ccccdfd0bde8bb35baa250aa6d5">
+                                <h2>Predawn</h2>
+                                <p>説明</p></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="three">
+                        <ul data-role="listview" data-filter="true" data-input="#artist-filter"  data-icon="audio" data-split-theme="a" data-inset="true">
+                            <li data-role="list-divider" style="background-color:green;"><span style="color:white">GREEN STAGE</span></li>
+                            <li><a data-artist-id="4Z8W4fKeB5YxbusRsdQVPb" class="preview">
+                                <img src="https://i.scdn.co/image/563754af10b3d9f9f62a3458e699f58c4a02870f">
+                                <h2>Radiohead</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-artist-id="12Chz98pHFMPJEknJQMWvI" class="preview">
+                                <img src="https://i.scdn.co/image/cf54c2d4a4549fb484862a9c475fc897bb5ce707">
+                                <h2>MUSE</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-artist-id="4tZwfgrHOc3mvqYlEYSvVi" class="preview">
+                                <img src="https://i.scdn.co/image/7340c3d9657a4851e19a1173a4eab3990482fea5">
+                                <h2>Daft Punk</h2>
+                                <p>説明</p></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div id="player" >
+
+                </div>
+
+                <script id="player-template"  type="text/x-handlebars-template">
+                  <div class="player-content"><i id="player-backward"  class="fa fa-backward" aria-hidden="true"></i></div>
+                  <div class="player-content"><i id="player-control"  class="fa fa-pause" aria-hidden="true"></i></div>
+                  <div class="player-content"><i id="player-forward"  class="fa fa-forward" aria-hidden="true"></i></div>
+                  <div class="player-content info"><span>{{songName}}</span>&nbsp;/&nbsp;<span>{{artistName}}</span></div>
+                </script>
+
+            </div>
+
+            <!-- <div data-role="footer">footer</div> -->
+
+        </div>
+
+    </body>
+
+    <script src="/js/spotify.js"></script>
+
+</html>

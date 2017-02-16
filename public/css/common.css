@@ -1,0 +1,136 @@
+body {
+    padding: 20px;
+}
+
+#search-form, .form-control {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.cover {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-size: cover;
+    z-index: 0;
+}
+
+.cover:hover {
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+    cursor: pointer;
+    transition: 0.25s;
+    -webkit-transition: 0.25s;
+}
+
+.cover:hover:before {
+    -webkit-filter:blur(3px);
+    filter: blur(3px);
+    content: '';
+    background: inherit;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+}
+
+.cover:hover:after {
+    content: attr(data-album-name);
+    text-shadow: 1px 2px 3px #000;
+    font-size: 32px;
+    color: white;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+#results {
+  margin-bottom: 96px;
+}
+
+
+.cover.playing-album {
+    border: 5px solid #1DB954;
+}
+
+.loading, .notfound {
+    position: relative;
+    top: 50%;
+    left: 40%;
+    width: 200px;
+    height: 100px;
+    margin: 40px 0 0;
+    line-height: 20px;
+    font-size: 96px;
+    color: black;
+    text-align: center;
+    background-color: rgba(#000,.7);
+    @include border-radius(10px);
+}
+
+.loading i {
+    color:#1DB954;
+}
+
+.notfound i {
+    color: gray;
+}
+.notfound p {
+    margin-top: 10px;
+    text-align: center;
+    color: gray;
+    font-size: 24px;
+}
+
+.play {
+  font-size: 42px;
+}
+
+
+.playing {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+}
+
+#player {
+  color: white;
+  overflow: hidden;
+  opacity: 0.9;
+  z-index: 99;
+}
+
+.player-content {
+  display: inline-block;
+  margin-left: 14px;
+  line-height: 48px;
+  font-size: 14px;
+}
+
+.player-content i {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.spotify-link {
+  color: #2ebd59;
+}
+
+.artist-name {
+  font-size: 14px;
+  color: darkgray;
+}
+
+.list {
+  margin-bottom: 24px;
+}

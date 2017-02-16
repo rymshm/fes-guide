@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="UTF-8">
+        <title>FUJI ROCK FESTIVAL</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.9/font-awesome-animation.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="/js/spotify.js"></script>
+    </head>
+
+    <body>
+
+        <div id="page1" data-role="page">
+            <div data-role="header">
+                <h1>7月25日(土)</h1>
+            </div>
+
+            <div data-role="content">
+
+                <!-- 日付のリスト -->
+                <ul data-role="listview" data-icon="audio" data-split-theme="a" data-inset="true">
+                    <li data-role="list-divider" style="background-color:green;"><span style="color:white">GREEN STAGE</span></li>
+                    <li><a data-artist-id="0O0hxUrO2PKxZknken3R24" class="preview">
+                        <img src="http://i.scdn.co/image/0ca26e76f9ae629f158f32e64e702f83bbe36ebc">
+                        <h2>Suchmos</h2>
+                        <p>説明文</p></a>
+                    </li>
+                    <li><a data-artist-id="1xU878Z1QtBldR7ru9owdU" class="preview">
+                        <img src="http://i.scdn.co/image/5d0b67506ce34853d78a0eb759f08a53557d0ffd">
+                        <h2>Phoenix</h2>
+                        <p>説明文</p></a>
+                    </li>
+                    <li><a data-artist-id="3IunaFjvNKj98JW89JYv9u" class="preview">
+                        <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                        <h2>the japanese house</h2>
+                        <p>Phoenix</p></a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- <div data-role="footer">footer</div> -->
+
+        </div>
+
+    </body>
+
+
+    <script type="text/javascript">
+
+        $('.preview').on('click', function() {
+            fetchTopTracks($(this).data('artist-id'), function() {
+                console.log('fetch top tracks success')
+            })
+        })
+
+
+    </script>
+
+
+</html>
