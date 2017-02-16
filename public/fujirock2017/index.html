@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        <title>FUJI ROCK FESTIVAL</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.9/font-awesome-animation.css">
+        <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="/css/common.css">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js" charset="utf-8"></script>
+    </head>
+
+    <body>
+
+        <div id="fujirock" data-role="page">
+            <div data-role="header">
+                <a href="" data-icon="back" data-rel="back">Back</a>
+                <h1>FUJI ROCK FESTIVAL 2017</h1>
+            </div>
+
+            <div data-role="content" class="list">
+
+                    <form class="ui-filterable">
+                        <input id="artist-filter" data-type="search" placeholder="Search Artist..">
+                    </form>
+
+                        <ul data-role="listview" data-filter="true" data-input="#artist-filter"  data-icon="audio" data-split-theme="a" data-inset="true">
+                            <li><a data-itunes-id="39883194" class="preview">
+                                <img src="http://i.scdn.co/image/0ca26e76f9ae629f158f32e64e702f83bbe36ebc">
+                                <h2>Apheix Twin</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="295015" class="preview">
+                                <img src="http://i.scdn.co/image/5d0b67506ce34853d78a0eb759f08a53557d0ffd">
+                                <h2>Bjork</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="29525428" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>LCD SOUND SYSTEM</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="315761934" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>MAJOR LAZER</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="315473044" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>THE XX</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="602767352" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>LORDE</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="857919" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>QUEEN OF STONE AGE</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="397781084" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>Catfish and Bottlemen</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="670807813" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>Asgeir</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="416281071" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>Bonobo</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="376517823" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>Sampha</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="906041141" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>Temples</h2>
+                                <p>説明文</p></a>
+                            </li>
+                            <li><a data-itunes-id="490808665" class="preview">
+                                <img src="http://i.scdn.co/image/99402e47afa8be61720b451739b99087bb3d64c6">
+                                <h2>Rhye</h2>
+                                <p>説明文</p></a>
+                            </li>
+                        </ul>
+
+                </div>
+
+                <div id="player" >
+
+                </div>
+
+                <script id="player-template"  type="text/x-handlebars-template">
+                  <div class="player-content"><i id="player-backward"  class="fa fa-backward" aria-hidden="true"></i></div>
+                  <div class="player-content"><i id="player-control"  class="fa fa-pause" aria-hidden="true"></i></div>
+                  <div class="player-content"><i id="player-forward"  class="fa fa-forward" aria-hidden="true"></i></div>
+                  <div class="player-content info"><span>{{songName}}</span>&nbsp;/&nbsp;<span>{{artistName}}</span></div>
+                </script>
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script src="/js/player.js"></script>
+
+</html>
