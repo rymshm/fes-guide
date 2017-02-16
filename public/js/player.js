@@ -73,6 +73,7 @@ var searchAlbums = function (query) {
 };
 
 var play = function(callback) {
+    audioObject.load();
     setTimeout(function() {
       audioObject.play();
       audioObject.addEventListener('ended', callback);
