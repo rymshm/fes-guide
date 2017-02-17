@@ -27,7 +27,7 @@ var fetchTopTracks = function (artistId, callback) {
 var getITunesTopTracks = function (iTunesId, callback) {
     $.ajax({
         dataType: 'JSONP',
-        url: "https://itunes.apple.com/lookup?id=" + iTunesId + "&entity=song&country=jp&sort=popular&limit=20",
+        url: "https://itunes.apple.com/lookup?id=" + iTunesId + "&entity=song&country=jp&sort=popular&limit=11",
         success: function (response) {
 
             // Delete ArtistInfo
@@ -43,7 +43,7 @@ var getITunesTopTracks = function (iTunesId, callback) {
                 trackList[val.trackName] = val;
             });
 
-            callback(result.slice(0, 8));
+            callback(result.slice(0, 7));
         }
     });
 
