@@ -1,5 +1,7 @@
 var widgetTemplate       = Handlebars.compile(document.getElementById('player-template').innerHTML),
     widgetPlaceholder    = document.getElementById('player'),
+    songlistTemplate     = Handlebars.compile(document.getElementById('songlist-template').innerHTML),
+    songlistPlaceholder  = document.getElementById('songlist')
     playingCssClass      = 'playing-album',
     audioObject          = null;
     songNumber           = 0;
@@ -41,7 +43,7 @@ var getITunesTopTracks = function (iTunesId, callback) {
                 trackList[val.trackName] = val;
             });
 
-            callback(result.slice(0, 15));
+            callback(result.slice(0, 8));
         }
     });
 
@@ -79,6 +81,20 @@ var play = function(callback) {
       audioObject.addEventListener('ended', callback);
     }, 450)
 }
+
+
+var previewPlay = function(url) {
+
+    if (audioObject) {
+        audioObject.pause();
+    }
+
+    audioObject = new Audio(url);
+
+    audioObject.play()
+}
+
+
 
 $('.preview').on('click', function(e) {
 
@@ -183,3 +199,25 @@ var songControl = function(e) {
         btn.classList.add('fa-play')
     }
 }
+
+
+$('.preview_list').on('click', function() {
+
+    $.mobile.loading("show", {
+        text: "loading",
+        textVisible: true,
+        theme: "z",
+        html:""
+    })
+
+    getITunesTopTracks(this.getAttribute('data-itunes-id') ,function(tracks) {
+
+        console.log(tracks)
+        songlistPlaceholder.innerHTML = songlistTemplate({
+            tracks: tracks
+        });
+        $.mobile.loading("hide")
+        $('#songlist').trigger('create').popup("open");
+    });
+
+});
