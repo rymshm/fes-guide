@@ -212,7 +212,6 @@ $('.preview_list').on('click', function() {
 
     getITunesTopTracks(this.getAttribute('data-itunes-id') ,function(tracks) {
 
-        console.log(tracks)
         songlistPlaceholder.innerHTML = songlistTemplate({
             tracks: tracks
         });
